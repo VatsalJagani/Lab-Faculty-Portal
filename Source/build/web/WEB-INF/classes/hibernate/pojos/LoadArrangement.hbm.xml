@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 22, 2017 6:14:26 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="hibernate.pojos.LoadArrangement" table="load_arrangement" catalog="faculty_portal" optimistic-lock="version">
+        <composite-id name="id" class="hibernate.pojos.LoadArrangementId">
+            <key-property name="empLeaveId" type="int">
+                <column name="EmpLeaveID" />
+            </key-property>
+            <key-property name="date" type="date">
+                <column name="Date" length="10" />
+            </key-property>
+            <key-property name="time" type="string">
+                <column name="Time" length="10" />
+            </key-property>
+        </composite-id>
+        <property name="semester" type="java.lang.Integer">
+            <column name="Semester" />
+        </property>
+        <property name="divBatch" type="string">
+            <column name="DivBatch" length="5" />
+        </property>
+        <property name="roomNo" type="java.lang.Integer">
+            <column name="RoomNo" />
+        </property>
+        <property name="subjectName" type="string">
+            <column name="SubjectName" length="50" />
+        </property>
+        <property name="assignedFaculty" type="java.lang.Integer">
+            <column name="AssignedFaculty" />
+        </property>
+        <property name="status" type="string">
+            <column name="Status" length="20" not-null="true" />
+        </property>
+        <property name="approveDate" type="date">
+            <column name="ApproveDate" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

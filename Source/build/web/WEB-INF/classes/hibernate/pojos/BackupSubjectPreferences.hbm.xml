@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 2, 2017 5:52:45 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="hibernate.pojos.BackupSubjectPreferences" table="backup_subject_preferences" catalog="faculty_portal" optimistic-lock="version">
+        <composite-id name="id" class="hibernate.pojos.BackupSubjectPreferencesId">
+            <key-property name="year" type="string">
+                <column name="Year" length="10" />
+            </key-property>
+            <key-property name="userId" type="int">
+                <column name="UserID" />
+            </key-property>
+            <key-property name="subId" type="int">
+                <column name="SubID" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

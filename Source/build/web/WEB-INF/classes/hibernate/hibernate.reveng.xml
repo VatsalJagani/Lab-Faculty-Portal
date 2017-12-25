@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="faculty_portal"/>
+  <table-filter match-name="subject_preference_settings"/>
+  <table-filter match-name="subject_preferences"/>
+  <table-filter match-name="backup_load_arrangement"/>
+  <table-filter match-name="users"/>
+  <table-filter match-name="leave_info"/>
+  <table-filter match-name="subjects_master"/>
+  <table-filter match-name="emp_leave_info"/>
+  <table-filter match-name="backup_slot_preference"/>
+  <table-filter match-name="backup_subject_preferences"/>
+  <table-filter match-name="semester_wise_subjects"/>
+  <table-filter match-name="load_arrangement"/>
+  <table-filter match-name="backup_emp_leave_request"/>
+  <table-filter match-name="slot_preference"/>
+  <table-filter match-name="emp_leave_request"/>
+  <table-filter match-name="backup_emp_leave_info"/>
+  <table-filter match-name="employees"/>
+  <table-filter match-name="departments"/>
+</hibernate-reverse-engineering>

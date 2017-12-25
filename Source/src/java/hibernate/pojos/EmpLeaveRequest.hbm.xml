@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 22, 2017 6:14:26 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="hibernate.pojos.EmpLeaveRequest" table="emp_leave_request" catalog="faculty_portal" optimistic-lock="version">
+        <id name="empLeaveId" type="java.lang.Integer">
+            <column name="EmpLeaveID" />
+            <generator class="identity" />
+        </id>
+        <property name="userId" type="int">
+            <column name="UserID" not-null="true" />
+        </property>
+        <property name="leaveType" type="int">
+            <column name="LeaveType" not-null="true" />
+        </property>
+        <property name="applyDate" type="date">
+            <column name="ApplyDate" length="10" not-null="true" />
+        </property>
+        <property name="startDate" type="date">
+            <column name="StartDate" length="10" not-null="true" />
+        </property>
+        <property name="endDate" type="date">
+            <column name="EndDate" length="10" not-null="true" />
+        </property>
+        <property name="approveDate" type="date">
+            <column name="ApproveDate" length="10" />
+        </property>
+        <property name="noOfDays" type="float">
+            <column name="NoOfDays" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="reason" type="string">
+            <column name="Reason" length="50" not-null="true" />
+        </property>
+        <property name="addressDuringLeave" type="string">
+            <column name="AddressDuringLeave" length="50" not-null="true" />
+        </property>
+        <property name="remark" type="string">
+            <column name="Remark" length="50" />
+        </property>
+        <property name="hodRemark" type="string">
+            <column name="HodRemark" length="50" />
+        </property>
+        <property name="status" type="string">
+            <column name="Status" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

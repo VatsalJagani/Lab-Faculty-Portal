@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 22, 2017 6:14:26 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="hibernate.pojos.Users" table="users" catalog="faculty_portal" optimistic-lock="version">
+        <id name="userName" type="string">
+            <column name="UserName" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="password" type="string">
+            <column name="Password" length="64" not-null="true" />
+        </property>
+        <property name="userId" type="int">
+            <column name="UserID" not-null="true" />
+        </property>
+        <property name="userType" type="string">
+            <column name="UserType" length="15" not-null="true" />
+        </property>
+        <property name="initials" type="string">
+            <column name="Initials" length="3" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

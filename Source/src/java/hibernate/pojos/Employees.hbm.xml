@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 22, 2017 6:14:26 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="hibernate.pojos.Employees" table="employees" catalog="faculty_portal" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="firstName" type="string">
+            <column name="FirstName" length="15" not-null="true" />
+        </property>
+        <property name="middleName" type="string">
+            <column name="MiddleName" length="15" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="LastName" length="15" />
+        </property>
+        <property name="birthDate" type="date">
+            <column name="BirthDate" length="10" />
+        </property>
+        <property name="joinDate" type="date">
+            <column name="JoinDate" length="10" />
+        </property>
+        <property name="leaveDate" type="date">
+            <column name="LeaveDate" length="10" />
+        </property>
+        <property name="working" type="java.lang.Integer">
+            <column name="Working" />
+        </property>
+        <property name="gender" type="string">
+            <column name="Gender" length="2" />
+        </property>
+        <property name="depId" type="int">
+            <column name="DepID" not-null="true" />
+        </property>
+        <property name="designation" type="string">
+            <column name="Designation" length="50" not-null="true" />
+        </property>
+        <property name="category" type="string">
+            <column name="Category" length="30" not-null="true" />
+        </property>
+        <property name="type" type="string">
+            <column name="Type" length="30" not-null="true" />
+        </property>
+        <property name="signature" type="binary">
+            <column name="Signature" />
+        </property>
+        <property name="salutation" type="string">
+            <column name="Salutation" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

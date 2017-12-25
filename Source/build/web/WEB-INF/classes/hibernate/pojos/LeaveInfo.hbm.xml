@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 22, 2017 6:14:26 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="hibernate.pojos.LeaveInfo" table="leave_info" catalog="faculty_portal" optimistic-lock="version">
+        <id name="lid" type="java.lang.Integer">
+            <column name="LID" />
+            <generator class="identity" />
+        </id>
+        <property name="leaveName" type="string">
+            <column name="LeaveName" length="20" not-null="true" />
+        </property>
+        <property name="leaveShortName" type="string">
+            <column name="LeaveShortName" length="10" not-null="true" />
+        </property>
+        <property name="allowed" type="java.lang.Integer">
+            <column name="Allowed" />
+        </property>
+    </class>
+</hibernate-mapping>

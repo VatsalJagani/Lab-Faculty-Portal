@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/faculty_portal?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <mapping resource="hibernate/pojos/LeaveInfo.hbm.xml"/>
+    <mapping resource="hibernate/pojos/SubjectPreferences.hbm.xml"/>
+    <mapping resource="hibernate/pojos/BackupSubjectPreferences.hbm.xml"/>
+    <mapping resource="hibernate/pojos/BackupSlotPreference.hbm.xml"/>
+    <mapping resource="hibernate/pojos/Departments.hbm.xml"/>
+    <mapping resource="hibernate/pojos/Employees.hbm.xml"/>
+    <mapping resource="hibernate/pojos/SemesterWiseSubjects.hbm.xml"/>
+    <mapping resource="hibernate/pojos/SubjectsMaster.hbm.xml"/>
+    <mapping resource="hibernate/pojos/SubjectPreferenceSettings.hbm.xml"/>
+    <mapping resource="hibernate/pojos/Users.hbm.xml"/>
+    <mapping resource="hibernate/pojos/BackupLoadArrangement.hbm.xml"/>
+    <mapping resource="hibernate/pojos/BackupEmpLeaveInfo.hbm.xml"/>
+    <mapping resource="hibernate/pojos/EmpLeaveRequest.hbm.xml"/>
+    <mapping resource="hibernate/pojos/BackupEmpLeaveRequest.hbm.xml"/>
+    <mapping resource="hibernate/pojos/LoadArrangement.hbm.xml"/>
+    <mapping resource="hibernate/pojos/SlotPreference.hbm.xml"/>
+    <mapping resource="hibernate/pojos/EmpLeaveInfo.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,25 @@
+Subject Preference Module
+=============================
+insert into subject_preferences (UserID,SubID) select UserID,SubID from backup_subject_preferences where Year like '2017%';
+DELETE from backup_subject_preferences where Year like '2017%';
+
+insert into slot_preference (UserID,Slot) select UserID,Slot from backup_slot_preference where Year like '2017%';
+DELETE from backup_slot_preference where Year like '2017%';
+
+
+LeaveManagement Module
+========================
+delete from emp_leave_info;
+insert into emp_leave_info (UserID,SLTaken,CLTaken,DLTaken,PLTaken,MLTaken) select UserID,SLTaken,CLTaken,DLTaken,PLTaken,MLTaken from backup_emp_leave_info where Year like '2017%';
+delete from backup_emp_leave_info where Year like '2017%';
+
+insert into emp_leave_request (EmpLeaveID,UserID,LeaveType,ApplyDate,StartDate,EndDate,ApproveDate,NoOfDays,Reason,AddressDuringLeave,Remark,HodRemark,Status) select EmpLeaveID,UserID,LeaveType,ApplyDate,StartDate,EndDate,ApproveDate,NoOfDays,Reason,AddressDuringLeave,Remark,HodRemark,Status from backup_emp_leave_request where Year like '2017%';
+delete from backup_emp_leave_request where Year like '2017%';
+
+insert into load_arrangement (EmpLeaveID,Date,Time,Semester,DivBatch,RoomNo,SubjectName,AssignedFaculty,Status,ApproveDate) select EmpLeaveID,Date,Time,Semester,DivBatch,RoomNo,SubjectName,AssignedFaculty,Status,ApproveDate from backup_load_arrangement where Year like '2017%';
+delete from backup_load_arrangement where Year like '2017%';
+
+
+
+
+
